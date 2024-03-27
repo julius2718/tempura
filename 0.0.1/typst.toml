@@ -1,0 +1,11 @@
+[package]
+name = "tempura"
+version = "0.0.1"
+entrypoint = "main.typ"
+authors = ["julius2718 <https://github.com/julius2718>"]
+license = "MIT"
+description = "A Typst template for Japanese documents"
+
+[template]
+path = "template"
+entrypoint = "template.typ"
