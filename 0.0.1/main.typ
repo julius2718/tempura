@@ -11,11 +11,15 @@
   text(sans(font: font)[#h(-1em) *#it* #h(1em)])
 }
 
-#let signature(title: "", date: "", author: "") = {
-  align(center, text(1.4em)[
-    *#title*
-    #v(0.3em)
-  ])
+#let signature(title: "", date: "", author: "", titlefont: "Noto Sans JP") = {
+  align(
+    center, text(
+      1.5em, font: (titlefont, "Hiragino Sans", "BIZ UDPGothic"), weight: "semibold",
+    )[
+      #title
+    ],
+  )
+  v(0.25em)
   align(center, text(1em)[
     #date
     #v(0.3em)
@@ -23,6 +27,8 @@
   ])
   v(0.3em)
 }
+
+#let itm_label(name) = place[#figure(supplement: [])[]#label(name)]
 
 #let jpdoc(
   doc, textfont: "Noto Serif JP", mathfont: "STIX Two Math", headfont: "Noto Sans JP",
